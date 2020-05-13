@@ -195,10 +195,10 @@ li {
   font-family: "Lato";
 }
 h1.title-head.text-center.white {
-  font-family: "Lato";
+  font-family: 'Lato', sans-serif;
   color: #717679;
   font-size: 95px;
-  font-weight: 100;
+  
   text-align: center;
   text-transform: uppercase;
   padding: 14px;
@@ -926,10 +926,10 @@ p.sub-title {
 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 h2.title-start {
-    font-family: "Lato";
+    font-family: 'Lato', sans-serif;
     color: #717679;
     font-size: 108px;
-    font-weight: 100;
+
     text-align: center;
     text-transform: uppercase;
 }
