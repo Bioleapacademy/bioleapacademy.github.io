@@ -684,7 +684,8 @@ a.navbar-logobrand {
   font-size: 38px;
   color: white;
   font-family: "Lato";
-  font-weight: lighter;
+  font-weight: unset;
+  
 }
 span.gold:hover {
   background: rgb(32, 37, 36);
@@ -714,7 +715,7 @@ section.footer {
 }
 h4.footer-title {
   color: #FFFFFF;
-  font-weight: lighter;
+  
   font-size: 24px;
 }
 ul.links-footer {
@@ -732,6 +733,7 @@ p.copyright-text {
 .testimonial{
   background: url(../img/testimonial.jpg) center center/cover no-repeat fixed;
   padding: 120px 0;
+  opacity: 0.7;
 }
 .item-image{
   width: 150px;
