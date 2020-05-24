@@ -23,7 +23,12 @@
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
-    <![endif]-->      
+	<![endif]-->     
+	<style>
+	html {
+		scroll-behavior: smooth;
+	}
+	</style> 
 	</head>	
 	<body>
 
@@ -43,13 +48,13 @@
 	        </div>
 	        <div class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	            <li class="active"><a href="#menu-slider">Home</a></li>
-	            <li><a href="#menu-features">About us</a></li>
-	            <li><a href="#menu-information">Courses</a></li>
-	            <li><a href="#menu-countdown">Admission</a></li> 	<!-- //Countdown -->
-	            <li><a href="#menu-price">Result</a></li>	<!--  // Pricing -->
-	            <li><a href="#menu-testimonial">Testimonials</a></li>
-	            <li><a href="#menu-contact">Contact</a></li>
+	            <li class="active"><a class="scroll" href="#menu-slider">Home</a></li>
+	            <li><a class="scroll" href="#about">About us</a></li>
+	            <li><a class="scroll" href="#courses">Courses</a></li>
+	            <li><a class="scroll" href="#admission">Admission</a></li> 	<!-- //Countdown -->
+	            <li><a class="scroll" href="#result">Result</a></li>	<!--  // Pricing -->
+	            <li><a class="scroll" href="#testimonials">Testimonials</a></li>
+	            <li><a class="scroll" href="#contact">Contact</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -81,7 +86,7 @@
 	</div>
 
 	<!-- Features -->
-	<section id="menu-features" class="features">
+	<section id="about" class="features">
        <h2 id="fittext2" class="title-start">About us</h2>
        <p class="sub-title">Shining stars of our Institute</p>  <!--  Featured PROJECTS THAT WE LOVE. -->
        <div class="container column-section">
@@ -115,7 +120,7 @@
 
 
 	<!-- Information -->
-   <section id="menu-information"  class="container information generic">
+   <section id="courses"  class="container information generic">
        <h2 id="fittext2" class="title-start">Our Courses</h2>
        <p class="sub-title">Featured Courses THAT WE Take.</p>  
 				<div class="item col-md-4">
@@ -190,7 +195,7 @@
             </section>
 	<!-- end Information -->
 	<!-- Countdown -->
-    <section id="menu-countdown" class="countdown generic examples examples--styled">
+    <section id="admission" class="countdown generic examples examples--styled">
          <h2 id="fittext2" class="title-start white">Countdown</h2>
          <p class="sub-title white">It's never too late, Get yourself Registered</p>
        	 <div class="container">
@@ -206,7 +211,7 @@
 
 
 	<!-- Pricing Table -->
-	<section id="menu-price" class="container price generic">
+	<section id="result" class="container price generic">
 		<h2 id="fittext2" class="title-start">Pricing</h2>
         <p class="sub-title">Most Affordable pricing</p>
 
@@ -310,7 +315,7 @@
 	</section>
 	<!-- end Pricing Table -->
 	<!-- Testimonials -->
-	<section id="menu-testimonial" class="testimonial">
+	<section id="testimonials" class="testimonial">
 		<div class="container">
 		    <h2 id="fittext2" class="title-start white">Testimonial</h2>
 	        <p class="sub-title white">Students Feedback about us</p>
@@ -361,7 +366,7 @@
 	<!-- end Testimonials -->
 
 	<!-- Contact-->
-	<section id="menu-contact" class="container contact generic">
+	<section id="contact" class="container contact generic">
 		<h2 id="fittext2" class="title-start">Contact us</h2>
 	    <p class="sub-title">Contact us for everything you need..</p>
 		<div class="map col-md-6 col-sm-6 col-xs-12">
@@ -459,6 +464,15 @@
         <script src="js/jquery.countdown.js"></script>
         <script type="text/javascript">
        		$("#fittext3,#fittext2").fitText(.95, { minFontSize: '35px', maxFontSize: '95px' });
+			$('.scroll').click(function() { 
+				var id = $(this).attr('href');
+				
+					$container.cycle(id.replace('#', '')); 
+						return false; 
+			});
+			
+			
+			
         </script>
     </body>    
 </html>
